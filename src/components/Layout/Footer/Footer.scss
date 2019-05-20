@@ -1,0 +1,34 @@
+@import "../../../variables.scss";
+
+.layout_footer {
+  &_banner {
+    background-color: $color-grey;
+    overflow: hidden;
+    border-top: 1rem solid $color-black;
+    img {
+      max-width: 90%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      @media (max-width: 500px) {
+        max-width: none;
+        max-height: 6rem;
+      }
+    }
+  }
+  &_social {
+    background-color: $color-black;
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      li {
+        margin: 1rem 0.5rem;
+        a {
+          img {
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

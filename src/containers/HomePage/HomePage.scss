@@ -1,0 +1,11 @@
+@import "../../variables.scss";
+
+.home-page {
+  &_intro {
+    height: calc(100vh - 6rem);
+    border-bottom: 1rem solid $color-black;
+    @media (max-width: 400px) {
+      height: calc(100vh - 10rem);
+    }
+  }
+}

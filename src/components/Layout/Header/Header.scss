@@ -5,11 +5,11 @@
   background-color: $color-black;
   justify-content: space-between;
   align-items: center;
-  height: 6rem;
   padding: 0 2rem;
+  min-height: 6rem;
   @media (max-width: 400px) {
     flex-direction: column;
-    height: 10rem;
+    min-height: 10rem;
     padding-bottom: 2rem;
     padding-top: 1rem;
   }

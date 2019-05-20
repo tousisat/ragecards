@@ -4,11 +4,13 @@ import { connect } from "react-redux";
 import Header from "./../components/Layout/Header/Header";
 import Footer from "./../components/Layout/Footer/Footer";
 
+import "./Layout.scss";
+
 const Layout = props => {
   return (
     <div className="layout">
       <Header logo={props.logo} navItems={props.navItems} />
-      <div>{props.children}</div>
+      <div className="main">{props.children}</div>
       <Footer banner={props.banner} socialItems={props.socialItems} />
     </div>
   );

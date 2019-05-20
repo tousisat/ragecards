@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.scss";
 
 const Footer = props => {
   return (
@@ -11,7 +12,9 @@ const Footer = props => {
           {props.socialItems.map(item => {
             return (
               <li key={item.id}>
-                <a href={item.link}>{item.text}</a>
+                <a href={item.link}>
+                  <img src={item.icon} alt={item.link} />
+                </a>
               </li>
             );
           })}
