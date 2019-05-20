@@ -1,0 +1,46 @@
+@import "../../../variables.scss";
+
+.layout_header {
+  display: flex;
+  background-color: $color-black;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  padding: 0 2rem;
+  @media (max-width: 400px) {
+    flex-direction: column;
+    height: 10rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+  }
+  &_logo {
+    img {
+      margin-bottom: -0.5rem;
+      height: 5rem;
+      @media (max-width: 400px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &_nav-items {
+    font-size: 2rem;
+    &--active {
+      color: $color-secondary !important;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      li:not(:last-child) {
+        margin-right: 2rem;
+        padding-right: 2rem;
+        border-right: 1px solid $color-white;
+      }
+
+      a {
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+  }
+}
