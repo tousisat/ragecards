@@ -1,6 +1,7 @@
 import React from "react";
 import "./HomePage.scss";
 import Intro from "../../components/HomePage/Intro/Intro";
+import CardsOverview from "./../../components/HomePage/CardsOverview/CardsOverview";
 
 const HomePage = props => {
   return (
@@ -8,7 +9,9 @@ const HomePage = props => {
       <div className="home-page_intro">
         <Intro />
       </div>
-      <div>Cards overview</div>
+      <div className="home-page_cards-overview">
+        <CardsOverview />
+      </div>
       <div>Deck Features</div>
     </div>
   );

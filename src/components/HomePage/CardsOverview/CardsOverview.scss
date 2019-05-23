@@ -1,0 +1,43 @@
+.carousel-container {
+  position: relative;
+  height: 50rem;
+  overflow: hidden;
+  touch-action: pan-y;
+  background-color: black;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+}
+
+.carousel-card {
+  flex: 0 0 30rem; //card size used in js
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+.carousel-card-inner {
+  position: relative;
+  flex-direction: column;
+  width: 290px; //must be lower then carousel-card value
+  height: 290px;
+  border-radius: 5px;
+}
+
+.carousel-title {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.carousel-text {
+  padding: 1em;
+  font-size: 14px;
+  white-space: pre-wrap;
+  text-align: left;
+  font-family: sans-serif;
+}
