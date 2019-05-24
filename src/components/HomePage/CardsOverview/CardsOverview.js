@@ -1,72 +1,106 @@
 import React from "react";
 import "./CardsOverview.scss";
-import TouchCarousel, {
-  range,
-  clamp,
-  precision,
-  getTouchPosition,
-  getTouchId,
-  omit,
-  modCursor
-} from "react-touch-carousel";
+import TouchCarousel from "react-touch-carousel";
 import touchWithMouseHOC from "./touchWithHOC";
 import NonPassiveTouchTarget from "./NonPassiveTouchTarget";
+import UIHeader from "../../UI/Header/Header";
+import diamond from "../../../assets/cards/diamond.png";
+import spade from "../../../assets/cards/spade.png";
+import club from "../../../assets/cards/club.png";
+import heart from "../../../assets/cards/heart.png";
 
-import data from "./data";
+import {
+  cards_clubs,
+  cards_court,
+  cards_diamonds,
+  cards_hearts,
+  cards_spades
+} from "./cards";
 
 const cardSize = 300; //check carousel-card in scss (width)
-const cardPadCount = 3;
+const cardPadCount = 5;
 const carouselWidth = window.innerWidth;
 
-function CarouselContainer(props) {
+const carouselContainer = props => {
   const { cursor, carouselState, ...rest } = props;
   // Put current card at center
   const translateX =
     (cursor - cardPadCount) * cardSize + (carouselWidth - cardSize) / 2;
   return (
-    <NonPassiveTouchTarget className="carousel-container">
+    <NonPassiveTouchTarget className="home-page_cards-overview_container">
       <NonPassiveTouchTarget
-        className="carousel-track"
+        className="home-page_cards-overview_container_track"
         style={{ transform: `translate3d(${translateX}px, 0, 0)` }}
         {...rest}
       />
     </NonPassiveTouchTarget>
   );
-}
-const Container = touchWithMouseHOC(CarouselContainer);
+};
+const container = touchWithMouseHOC(carouselContainer);
 
-function renderCard(index, modIndex, cursor) {
-  const item = data[modIndex];
-  const rotate = 40 * (index + cursor);
+const renderCard = (cards, rotation) => (index, modIndex, cursor) => {
+  const item = cards[modIndex];
+  const rotate = rotation * (index + cursor);
   const onTop = Math.abs(index + cursor) < 0.5;
   return (
-    <div key={index} className="carousel-card">
+    <div key={index} className="home-page_cards-overview_container_track_card">
       <div
-        className="carousel-card-inner"
+        className="home-page_cards-overview_container_track_card_card-inner"
         style={{
-          backgroundColor: item.background,
           transform: `rotate(${rotate}deg)`,
           zIndex: onTop ? 1 : 0
         }}
       >
-        <div className="carousel-title">{item.title}</div>
-        <div className="carousel-text">{item.text}</div>
+        <img src={item} alt="card" />
       </div>
     </div>
   );
-}
+};
 
 const CardsOverview = props => {
   return (
-    <TouchCarousel
-      component={Container}
-      cardSize={cardSize}
-      cardCount={data.length}
-      cardPadCount={cardPadCount}
-      loop={true}
-      autoplay={false}
-      renderCard={renderCard}
-    />
+    <div>
+      <UIHeader img={diamond}>the diamonds</UIHeader>
+      <TouchCarousel
+        component={container}
+        cardSize={cardSize}
+        cardCount={cards_diamonds.length}
+        cardPadCount={cardPadCount}
+        loop={true}
+        autoplay={1500}
+        renderCard={renderCard(cards_diamonds, 90)}
+      />
+      <UIHeader img={spade}>the spades</UIHeader>
+      <TouchCarousel
+        component={container}
+        cardSize={cardSize}
+        cardCount={cards_spades.length}
+        cardPadCount={cardPadCount}
+        loop={true}
+        autoplay={1500}
+        renderCard={renderCard(cards_spades, 45)}
+      />
+      <UIHeader img={club}>the clubs</UIHeader>
+      <TouchCarousel
+        component={container}
+        cardSize={cardSize}
+        cardCount={cards_clubs.length}
+        cardPadCount={cardPadCount}
+        loop={true}
+        autoplay={1500}
+        renderCard={renderCard(cards_clubs, 90)}
+      />
+      <UIHeader img={heart}>the hearts</UIHeader>
+      <TouchCarousel
+        component={container}
+        cardSize={cardSize}
+        cardCount={cards_hearts.length}
+        cardPadCount={cardPadCount}
+        loop={true}
+        autoplay={1500}
+        renderCard={renderCard(cards_hearts, 45)}
+      />
+    </div>
   );
 };
 

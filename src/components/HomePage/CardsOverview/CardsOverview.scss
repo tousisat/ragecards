@@ -1,43 +1,42 @@
-.carousel-container {
-  position: relative;
-  height: 50rem;
+@import "../../../variables";
+
+.home-page_cards-overview_container {
+  height: 55rem;
   overflow: hidden;
   touch-action: pan-y;
-  background-color: black;
-}
+  border-bottom: 7rem solid black;
+  @media (max-width: 900px) {
+    height: 50rem;
+  }
 
-.carousel-track {
-  display: flex;
-  height: 100%;
-}
+  &_track {
+    display: flex;
+    height: 100%;
 
-.carousel-card {
-  flex: 0 0 30rem; //card size used in js
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-}
+    &_card {
+      flex: 0 0 30rem; //card size used in js
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
 
-.carousel-card-inner {
-  position: relative;
-  flex-direction: column;
-  width: 290px; //must be lower then carousel-card value
-  height: 290px;
-  border-radius: 5px;
-}
-
-.carousel-title {
-  margin-top: 20px;
-  font-size: 1.5em;
-}
-
-.carousel-text {
-  padding: 1em;
-  font-size: 14px;
-  white-space: pre-wrap;
-  text-align: left;
-  font-family: sans-serif;
+      &_card-inner {
+        flex-direction: column;
+        width: 290px; //must be lower then carousel-card value
+        height: 290px;
+        border-radius: 5px;
+        img {
+          height: 290px;
+          border-radius: 1rem;
+          box-shadow: 1rem 1rem 2rem $color-black;
+          -khtml-user-select: none;
+          -o-user-select: none;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          user-select: none;
+        }
+      }
+    }
+  }
 }

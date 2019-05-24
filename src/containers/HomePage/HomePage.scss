@@ -8,4 +8,8 @@
       height: calc(100vh - 10rem);
     }
   }
+
+  &_cards-overview {
+    background-color: $color-primary-dark;
+  }
 }

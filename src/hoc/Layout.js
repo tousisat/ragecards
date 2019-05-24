@@ -10,7 +10,7 @@ const Layout = props => {
   return (
     <div className="layout">
       <Header logo={props.logo} navItems={props.navItems} />
-      <div className="main">{props.children}</div>
+      {props.children}
       <Footer banner={props.banner} socialItems={props.socialItems} />
     </div>
   );
