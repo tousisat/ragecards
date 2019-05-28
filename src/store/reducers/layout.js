@@ -18,7 +18,7 @@ const initialState = {
       link: "https://www.instagram.com/ragecards/",
       icon: iconinstagram
     },
-    { id: 3, link: "mailto:raphaelbridi@yahoo.com", icon: iconemail }
+    { id: 3, link: "mailto:info.ragecards@gmail.com", icon: iconemail }
   ]
 };
 

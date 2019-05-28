@@ -49,7 +49,7 @@ const ProductList = props => {
       <Product
         title="majestic full brick"
         img={deck12}
-        description="twelve (12) Rage cards deck (plastic sealed)"
+        description="Twelve (12) Rage cards deck (plastic sealed)"
         price={48}
         payURL={
           "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NCJP3GZ8P3SZQ"
