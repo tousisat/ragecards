@@ -15,7 +15,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "homepage": "https://tousisat.github.io/ragecards",
+    "homepage": "https://ragecards.com",
     "start": "react-scripts start",
     "predeploy": "react-scripts build",
     "deploy": "gh-pages -d build",
