@@ -58,6 +58,8 @@ const renderCard = (cards, rotation) => (index, modIndex, cursor) => {
 };
 
 const CardsOverview = props => {
+  //because it lag on small devices
+  const autoplay = carouselWidth < 600 ? false : 1500;
   return (
     <div>
       <UIHeader img={diamond}>the diamonds</UIHeader>
@@ -67,7 +69,7 @@ const CardsOverview = props => {
         cardCount={cards_diamonds.length}
         cardPadCount={cardPadCount}
         loop={true}
-        autoplay={1500}
+        autoplay={autoplay}
         renderCard={renderCard(cards_diamonds, 90)}
       />
       <UIHeader img={spade}>the spades</UIHeader>
@@ -77,7 +79,7 @@ const CardsOverview = props => {
         cardCount={cards_spades.length}
         cardPadCount={cardPadCount}
         loop={true}
-        autoplay={1500}
+        autoplay={autoplay}
         renderCard={renderCard(cards_spades, 45)}
       />
       <UIHeader img={club}>the clubs</UIHeader>
@@ -87,7 +89,7 @@ const CardsOverview = props => {
         cardCount={cards_clubs.length}
         cardPadCount={cardPadCount}
         loop={true}
-        autoplay={1500}
+        autoplay={autoplay}
         renderCard={renderCard(cards_clubs, 90)}
       />
       <UIHeader img={heart}>the hearts</UIHeader>
@@ -97,7 +99,7 @@ const CardsOverview = props => {
         cardCount={cards_hearts.length}
         cardPadCount={cardPadCount}
         loop={true}
-        autoplay={1500}
+        autoplay={autoplay}
         renderCard={renderCard(cards_hearts, 45)}
       />
     </div>
