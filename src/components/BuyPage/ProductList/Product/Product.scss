@@ -1,0 +1,44 @@
+@import "../../../../variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt&display=swap");
+.buy-page_product_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $color-black;
+
+  box-shadow: 1rem 1rem 1rem $color-black;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 2rem;
+  &_image {
+    img {
+      height: 17rem;
+    }
+  }
+
+  &_container {
+    border-top: 0.2rem dashed $color-black;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_title {
+      font-family: "Rock Salt", cursive;
+      line-height: 5rem;
+    }
+    &_description {
+      font-size: 1.5rem;
+      color: $color-grey;
+    }
+    &_price {
+      margin-top: 1rem;
+      font-family: "Rock Salt", cursive;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: $color-secondary;
+    }
+    &_paynow {
+      margin-top: 1rem;
+    }
+  }
+}
