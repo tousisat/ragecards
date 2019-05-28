@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.c266ae70.chunk.css",
-    "main.js": "/static/js/main.8039fd0e.chunk.js",
-    "main.js.map": "/static/js/main.8039fd0e.chunk.js.map",
+    "main.js": "/static/js/main.3c592dce.chunk.js",
+    "main.js.map": "/static/js/main.3c592dce.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
     "static/js/2.54ce4d7c.chunk.js": "/static/js/2.54ce4d7c.chunk.js",
     "static/js/2.54ce4d7c.chunk.js.map": "/static/js/2.54ce4d7c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a7c54abfde6f01deb25327c0bd406fa0.js": "/precache-manifest.a7c54abfde6f01deb25327c0bd406fa0.js",
+    "precache-manifest.f4031ee5bcbc21df4d0eef0e883034a3.js": "/precache-manifest.f4031ee5bcbc21df4d0eef0e883034a3.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.c266ae70.chunk.css.map": "/static/css/main.c266ae70.chunk.css.map",
     "static/media/12deck.PNG": "/static/media/12deck.cd9246c7.PNG",
