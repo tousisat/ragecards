@@ -1,21 +1,21 @@
 import React from "react";
-import "./Feature.scss";
-import UITitle from "./../../UI/Title/Title";
-import avatar from "../../../assets/feature.png";
-import image from "../../../assets/feature2.gif";
+import "./FeaturePage.scss";
+import avatar from "../../assets/feature.png";
+import image from "../../assets/feature2.gif";
+import UITitle from "./../../components/UI/Title/Title";
 
-const Feature = props => {
+const FeaturePage = props => {
   return (
-    <div className="home-page_feature_container">
-      <div className="home-page_feature_container_title">
+    <div className="feature-page">
+      <div className="feature-page_title">
         <UITitle
           img={avatar}
           title="Feature"
           subtitle="What are Rage Comics?"
         />
       </div>
-      <div className="home-page_feature_container_blog">
-        <div className="home-page_feature_container_blog_text">
+      <div className="feature-page_blog">
+        <div className="feature-page_blog_text">
           <p>
             <b>Rage Comics</b> are series of web comics with characters,
             sometimes referred to as “rage faces”, that are often created with
@@ -26,14 +26,14 @@ const Feature = props => {
             generators” or “rage makers”
           </p>
         </div>
-        <div className="home-page_feature_container_blog_image-container">
-          <div className="home-page_feature_container_blog_image-container_image">
+        <div className="feature-page_blog_image-container">
+          <div className="feature-page_blog_image-container_image">
             <img src={image} alt="RAGECARDS" />
           </div>
-          <div className="home-page_feature_container_blog_image-container_label" />
+          <div className="feature-page_blog_image-container_label" />
           <label>playing cards + rage comics = RAGE CARDS</label>
         </div>
-        <div className="home-page_feature_container_blog_text">
+        <div className="feature-page_blog_text">
           <p>
             Rage cards are fun, quirky and interesting; each one is unique and
             sure to delight! This time we upgraded the cards to reach the
@@ -41,7 +41,7 @@ const Feature = props => {
             make the funniest deck ever!
           </p>
         </div>
-        <div className="home-page_feature_container_blog_list">
+        <div className="feature-page_blog_list">
           <ul>
             <li>
               Printed by a <b>major</b> games printing and manufacturing giant
@@ -72,4 +72,4 @@ const Feature = props => {
   );
 };
 
-export default Feature;
+export default FeaturePage;

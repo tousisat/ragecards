@@ -7,7 +7,7 @@ import iconemail from "../../assets/email.png";
 const initialState = {
   logo,
   navItems: [
-    { id: 1, link: "/blog", text: "Blog" },
+    { id: 1, link: "/feature", text: "Feature" },
     { id: 2, link: "/buy", text: "Buy now" }
   ],
   banner,
