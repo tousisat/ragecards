@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import MapComponent from "pigeon-maps";
-import Marker from "pigeon-marker";
+import Marker from "./Marker";
 import "./Map.scss";
 
 const providers = {
@@ -23,15 +23,39 @@ const providers = {
 
 const markers = [
   {
-    coord: [50.879, 4.6997],
-    name: "Raphael B.",
-    deckType: "Collector Edition",
+    coord: [40, -78],
+    name: "Mike B.",
+    deckType: "Silver",
+    deckNumber: 1
+  },
+  {
+    coord: [51, 0],
+    name: "Ronald O.",
+    deckType: "Collector",
+    deckNumber: 1
+  },
+  {
+    coord: [41, -74],
+    name: "Dennis L.",
+    deckType: "Collector",
+    deckNumber: 2
+  },
+  {
+    coord: [-31, 116],
+    name: "Ellen N.",
+    deckType: "Collector",
     deckNumber: 3
   },
   {
-    coord: [55.879, -4.6997],
-    name: "Mokhtar T.",
-    deckType: "Collector Edition",
+    coord: [-34, 116],
+    name: "Pat B.",
+    deckType: "Collector",
+    deckNumber: 4
+  },
+  {
+    coord: [1.3, 104],
+    name: "Joel J.",
+    deckType: "Collector",
     deckNumber: 5
   }
 ];
@@ -62,6 +86,9 @@ const Map = props => {
         <Marker
           key={index}
           anchor={marker.coord}
+          name={marker.name}
+          edition={marker.deckType}
+          deckId={marker.deckNumber}
           onClick={() => {
             setCenter(marker.coord);
             setZoom(5.2);

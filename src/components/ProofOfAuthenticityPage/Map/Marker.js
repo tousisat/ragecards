@@ -1,11 +1,11 @@
 //https://github.com/mariusandra/pigeon-marker/blob/master/src/index.js
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import "./Marker.scss";
 
-import pin from "./img/pin.png";
-import pinRetina from "./img/pin@2x.png";
-import pinHover from "./img/pin-hover.png";
-import pinHoverRetina from "./img/pin-hover@2x.png";
+import pin from "../../../assets/marker/pin.png";
+import pinRetina from "../../../assets/marker/pin@2x.png";
+import pinHover from "../../../assets/marker/pin-hover.png";
+import pinHoverRetina from "../../../assets/marker/pin-hover@2x.png";
 
 const imageOffset = {
   left: 15,
@@ -13,39 +13,10 @@ const imageOffset = {
 };
 
 export default class Marker extends Component {
-  static propTypes =
-    process.env.BABEL_ENV === "inferno"
-      ? {}
-      : {
-          // input, passed to events
-          anchor: PropTypes.array.isRequired,
-          payload: PropTypes.any,
-
-          // optional modifiers
-          hover: PropTypes.bool,
-
-          // callbacks
-          onClick: PropTypes.func,
-          onContextMenu: PropTypes.func,
-          onMouseOver: PropTypes.func,
-          onMouseOut: PropTypes.func,
-
-          // pigeon variables
-          left: PropTypes.number,
-          top: PropTypes.number,
-
-          // pigeon functions
-          latLngToPixel: PropTypes.func,
-          pixelToLatLng: PropTypes.func
-        };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      hover: false
-    };
-  }
+  state = {
+    hover: false,
+    showText: true
+  };
 
   // what do you expect to get back with the event
   eventParameters = event => ({
@@ -74,6 +45,22 @@ export default class Marker extends Component {
       : this.isHover()
       ? pinHover
       : pin;
+  }
+
+  showTextComponent() {
+    return (
+      <div className="marker_showtext">
+        <div className="marker_showtext_name">
+          <b>Name:</b> {this.props.name}
+        </div>
+        <div className="marker_showtext_edition">
+          <b>Edition:</b> {this.props.edition}
+        </div>
+        <div className="marker_showtext_deck-id">
+          <b>Deck Id:</b> {this.props.deckId}
+        </div>
+      </div>
+    );
   }
 
   // lifecycle
@@ -133,6 +120,7 @@ export default class Marker extends Component {
         onMouseOut={this.handleMouseOut}
       >
         <img src={this.image()} width={29} height={34} alt="" />
+        {this.state.showText ? this.showTextComponent() : null}
       </div>
     );
   }

@@ -8,7 +8,11 @@ const ProofOfAuthenticityPage = props => {
   return (
     <div className="proof-of-authenticity-page">
       <div className="proof-of-authenticity-page_title">
-        <UITitle img={avatar} title="Authentic" subtitle="Here's the proof!" />
+        <UITitle
+          img={avatar}
+          title="Authentic"
+          subtitle="Here's the legends!"
+        />
       </div>
       <Map />
     </div>

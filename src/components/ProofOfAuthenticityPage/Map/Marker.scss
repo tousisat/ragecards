@@ -1,0 +1,17 @@
+@import "../../../variables";
+
+.marker {
+  &_showtext {
+    background-color: $color-secondary;
+    padding: 0.5rem;
+    border: 1px solid $color-black;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 1rem $color-black;
+    &_name {
+    }
+    &_edition {
+    }
+    &_deck-id {
+    }
+  }
+}
