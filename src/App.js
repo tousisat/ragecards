@@ -11,7 +11,10 @@ import Layout from "./hoc/Layout";
 const App = props => {
   const routes = (
     <Switch>
-      <Route path="/proofofauthenticity" component={ProofOfAuthenticityPage} />
+      <Route
+        path="/proof-of-authenticity"
+        component={ProofOfAuthenticityPage}
+      />
       <Route path="/buy" component={BuyPage} />
       <Route path="/feature" component={FeaturePage} />
       <Route path="/" exact component={HomePage} />
