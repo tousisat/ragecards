@@ -21,14 +21,20 @@ const providers = {
   }
 };
 
-const markers = {
-  leuven1: [50.879, 4.6997],
-  leuven2: [50.874, 4.6947],
-  brussels: [50.8505, 4.35149],
-  ghent: [51.0514, 3.7103],
-  coast: [51.2214, 2.9541]
-};
-
+const markers = [
+  {
+    coord: [50.879, 4.6997],
+    name: "Raphael B.",
+    deckType: "Collector Edition",
+    deckNumber: 3
+  },
+  {
+    coord: [55.879, -4.6997],
+    name: "Mokhtar T.",
+    deckType: "Collector Edition",
+    deckNumber: 5
+  }
+];
 const Map = props => {
   const [center, setCenter] = useState([50.1102, 3.1506]);
   const [zoom, setZoom] = useState(2.5);
@@ -52,13 +58,13 @@ const Map = props => {
       height={550}
       boxClassname="pigeon-filters"
     >
-      {Object.keys(markers).map(key => (
+      {markers.map((marker, index) => (
         <Marker
-          key={key}
-          anchor={markers[key]}
+          key={index}
+          anchor={marker.coord}
           onClick={() => {
-            setCenter(markers[key]);
-            setZoom(5.5);
+            setCenter(marker.coord);
+            setZoom(5.2);
           }}
         />
       ))}
