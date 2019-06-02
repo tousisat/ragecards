@@ -29,34 +29,40 @@ const markers = [
     deckNumber: 1
   },
   {
+    coord: [42, -83.7],
+    name: "Sheng S. L.",
+    deckType: "Collector",
+    deckNumber: 1
+  },
+  {
     coord: [51, 0],
     name: "Ronald O.",
     deckType: "Collector",
-    deckNumber: 1
+    deckNumber: 4
   },
   {
     coord: [41, -74],
     name: "Dennis L.",
     deckType: "Collector",
-    deckNumber: 2
+    deckNumber: 6
   },
   {
     coord: [-31, 116],
     name: "Ellen N.",
     deckType: "Collector",
-    deckNumber: 3
+    deckNumber: 5
   },
   {
     coord: [-34, 116],
     name: "Pat B.",
     deckType: "Collector",
-    deckNumber: 4
+    deckNumber: 2
   },
   {
     coord: [1.3, 104],
     name: "Joel J.",
     deckType: "Collector",
-    deckNumber: 5
+    deckNumber: 3
   }
 ];
 const Map = props => {
